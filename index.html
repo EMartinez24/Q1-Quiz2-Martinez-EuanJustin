@@ -1,0 +1,170 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Q1 Quiz 2</title>
+    <style>
+        body {
+            background-color: #001D3D; /* Dark blue background */
+            color: #FFC300; /* Yellow text color */
+            font-family: sans-serif; /* Font family */
+            display: flex; /* Flexbox layout */
+            flex-direction: column; /* Column layout */
+            min-height: 100vh; /* Minimum height of viewport */
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        .content {
+            display: flex; /* Flexbox for content */
+            flex-direction: column; /* Column layout */
+            align-items: center; /* Center items horizontally */
+            justify-content: flex-start; /* Align items to the top */
+            text-align: center; /* Center text */
+            flex: 1; /* Allow content to grow */
+        }
+
+        ul {
+            list-style: none;
+            display: inline-flex;
+            gap: 10px;
+            padding-left: 0;
+        }
+
+        ul li {
+            display: inline;
+        }
+
+        ol {
+            list-style-type: decimal;
+            padding-left: 20px;
+            margin-left: 40px;
+            align-self: flex-start;
+        }
+
+        h3 {
+            margin-left: 40px;
+        }
+
+        .card {
+            background-color: white; /* White background for cards */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            margin: 15px; /* Margin between cards */
+            padding: 20px; /* Padding inside cards */
+            text-align: center; /* Centered text inside cards */
+            width: 180px; /* Fixed width for cards */
+            flex-shrink: 0; /* Prevent cards from shrinking */
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transition */
+        }
+
+        .card:hover {
+            transform: scale(1.1); /* Slightly enlarge the card */
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Increase shadow for popping effect */
+        }
+
+        .card-container {
+            display: flex; /* Flexbox layout for cards */
+            justify-content: center; /* Center cards horizontally */
+            flex-wrap: wrap; /* Allow cards to wrap to next line */
+        }
+
+        .character {
+            border-radius: 8px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: #FFC300;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            width: 100%; /* Fill the entire width */
+            background-color: #003e80; /* Same as the body background */
+            color: #FFC300; /* Footer text color */
+            padding: 20px; /* Add space inside the footer */
+            text-align: center; /* Center footer text */
+            position: relative; /* Set relative for normal flow, or use fixed for always at bottom */
+            bottom: 0; /* Position at the bottom */
+            margin-top: 40px;
+        }
+
+        .fieldsets {
+            align-self: flex-start; /* Align fieldsets to the left */
+            width: 100%; /* Make sure it stretches full width if necessary */
+            text-align: left; /* Ensure the content inside is also aligned left */
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        .submit {
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1 style="color: #FFC300;">Despicable Me 4</h1>
+
+        <img src="https://xl.movieposterdb.com/24_05/2024/7510222/xl_despicable-me-4-movie-poster_7eab9327.jpg" width=300>
+
+        <p><strong>Gru</strong> welcomes a new family member in <strong>Gru Jr.</strong>, whose only goal is to torment his dad.</p> 
+        <p>However, their peaceful existence comes crashing down due to <strong>Maxime Le Mal</strong>, an enemy of Gru, escaping from prison and vowing revenge against Gru.</p>
+
+        <h2 style="color: #FFC300;">Characters</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="https://static.wikia.nocookie.net/despicableme/images/f/f0/DM3_Minions_.jpg/revision/latest?cb=20230531232107" alt="minions" width="150" class="character">
+                <br>
+                <a href="https://en.wikipedia.org/wiki/Minions_(Despicable_Me)" target="_blank">Minions (Pierre Coffin)</a>
+            </div>
+            <div class="card">
+                <img src="https://avatarfiles.alphacoders.com/236/236185.jpg" alt="gru" width="150" class="character">
+                <br>
+                <a href="https://en.wikipedia.org/wiki/Gru" target="_blank">Gru (Steve Carrell)</a>
+            </div>
+            <div class="card">
+                <img src="https://static.wikia.nocookie.net/universalstudios/images/8/82/Despicable-me-2-image-6.jpg/revision/latest?cb=20230326235048" alt="lucy wilde" width="150" class="character">
+                <br>
+                <a href="https://despicableme.fandom.com/wiki/Lucy_Wilde" target="_blank">Lucy Wilde (Kristen Wiig)</a>
+            </div>
+        </div>
+        <div class="fieldsets">
+        <fieldset class="think">
+            <legend>What did you think about the movie?</legend>
+            <textarea name="comments" rows="5" cols="80" placeholder="Give a short review about the movie"></textarea>
+        </fieldset>
+
+        <fieldset class="movierecs">
+            <legend>Movie Recommendations</legend>
+            <select name="cars" id="cars">
+                <optgroup label="Movie Recommendations">
+                <option value="smbmovie">The Super Mario Bros. Movie (Released April 5, 2023)</option>
+                <option value="minionsriseofgru">Minions: The Rise of Gru (Released July 1, 2022)</option>
+                <option value="despicableme2">Despicable Me 2 (Released July 3, 2014)</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Another Recommendation?</legend>
+            <label for="movietitle">Input Movie Title Here:</label>
+            <input type="text" name="anotherrecommendation">
+        </fieldset>
+        </div>
+
+        <input type="submit" class="submit" value="Submit" style="width: 1200px; padding: 10px;">
+
+    <div class="footer">
+        <h2>Euan Justin Martinez | 9-Sapphire</h2>
+    </div>
+</body>
+</html>
